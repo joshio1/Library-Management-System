@@ -61,6 +61,17 @@ class RoomsController < ApplicationController
     end
   end
 
+  # GET /manage/rooms
+  # GET /rooms/1.json
+  def manage
+    @rooms = Room.all();
+    # @room = @rooms.second
+    # @room.bookings.each do |booking|
+    #   text += booking.booking_start_time.to_s;
+    # end
+    # render plain: self.text;
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_room
