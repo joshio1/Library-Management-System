@@ -13,4 +13,21 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require moment
+//= require fullcalendar
 //= require_tree .
+
+$(document).ready(function () {
+    $('#calendar').fullCalendar({
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'agendaDay,agendaWeek'
+        },
+        height: 'auto',
+        events: "/bookings",
+        defaultView: 'agendaDay',
+    });
+});
+
+

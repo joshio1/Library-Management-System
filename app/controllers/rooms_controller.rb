@@ -7,10 +7,10 @@ class RoomsController < ApplicationController
     @rooms = Room.all
   end
 
-  # GET /rooms/1
-  # GET /rooms/1.json
-  def show
-  end
+  # # GET /rooms/1
+  # # GET /rooms/1.json
+  # def show
+  # end
 
   # GET /rooms/new
   def new
@@ -61,8 +61,7 @@ class RoomsController < ApplicationController
     end
   end
 
-  # GET /manage/rooms
-  # GET /rooms/1.json
+  # GET /rooms/manage
   def manage
     @rooms = Room.all();
     # @room = @rooms.second
@@ -70,6 +69,21 @@ class RoomsController < ApplicationController
     #   text += booking.booking_start_time.to_s;
     # end
     # render plain: self.text;
+  end
+
+  # GET /rooms/get_events
+  def get_events
+    @rooms = Room.all();
+    @rooms.each do |room|
+      # @room.bookings.each do |booking|
+      #   text += booking.booking_start_time.to_s;
+      # end
+      # render plain: self.text;
+      room.bookings.each do |booking|
+        events << {:id => booking.id, :title => "Booked", :start => "#{booking.booking_start_time}",:end => "#{booking_start_time+2}" }
+      end
+      render :text => events.to_json
+    end
   end
 
   private
