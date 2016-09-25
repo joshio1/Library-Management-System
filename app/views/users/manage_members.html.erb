@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Admins</h1>
+<h1>Manage Library Members</h1>
 
 <table>
   <thead>
@@ -16,8 +16,9 @@
       <tr>
         <td><%= user.email %></td>
         <td><%= user.name %></td>
+        <td><%= user.id %></td>
         <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'View Reservation History', new_booking_url %></td>
+        <td><%= link_to 'View Reservation History', view_history_booking_url(user.id) %></td>
         <td><%= link_to 'Delete Member', user, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
@@ -27,4 +28,5 @@
 
 <br>
 
-<%= link_to 'Create New Admin', new_user_path %>
+<%= link_to 'Manage Admins', manage_admins_users_url %> |
+<%= link_to 'Manage Rooms', manage_rooms_url %> |

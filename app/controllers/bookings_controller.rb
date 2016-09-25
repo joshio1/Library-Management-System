@@ -19,8 +19,13 @@ class BookingsController < ApplicationController
 
   # GET /bookings/new
   def new
-    render plain: params[:id];
     @booking = Booking.new
+  end
+
+  # GET /bookings/1/view_history
+  def view_history
+    @bookings = Booking.where('user_id=?',params[:id]);
+    @user = User.find_by(params[:id]);
   end
 
   # GET /bookings/1/edit

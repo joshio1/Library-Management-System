@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :bookings
+
+  resources :bookings do
+  get 'view_history', on: :member
+  end
+
   resources :users do
     get 'show_admin', on: :member
     get 'manage_admins', on: :collection
