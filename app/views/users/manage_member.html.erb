@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Manage Rooms</h1>
+
+<br>
+<br>
+<br>
+<h2>
+<%= link_to 'Add a new room', new_room_path %></h2>
+
+<br>
+<h2>Room Status:</h2>
+<div id="calendar"></div>
+
+<h2>View Room Details:</h2>
+
+<%= form_for @room, url: {action: "view_room_details"} do |f| %>
+    <%= select_tag "room", options_from_collection_for_select(@rooms, "id", "number") %>
+    <%= f.submit "View Room" %>
+<% end %>
+
+
+<br>
+<h2>
+<%= link_to 'Book Room as a user', new_booking_path %>
+</h2>
