@@ -28,6 +28,12 @@ class BookingsController < ApplicationController
     @user = User.find_by(params[:id]);
   end
 
+  #
+  def view_current_reservation
+    @bookings = Booking.where('(user_id=? AND booking_start_time>=? )',params[:id], Time.now);
+    @user = User.find_by(params[:id]);
+  end
+
   # GET /bookings/1/edit
   def edit
   end

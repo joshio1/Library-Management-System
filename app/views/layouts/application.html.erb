@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LibraryApp</title>
+    <title>Library Manager</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <h1>Library Manager</h1>
+
   <body>
+
+    <div id="user_header">
+      <% if current_user %>
+          Logged in as <%= current_user.email %>
+          <%= link_to "Log out", logout_path %>
+      <% else %>
+          <%= link_to "Sign Up", signup_path %> or
+          <%= link_to "Log In", login_path %>
+      <%end%>
+    </div>
+
+    <% flash.each do |key,value|  %>
+        <%= content_tag(:div, class: "alert alert-#{key}") do %>
+            <p><%= value %></p>
+        <%end%>
+    <%end%>
+
     <%= yield %>
   </body>
 </html>

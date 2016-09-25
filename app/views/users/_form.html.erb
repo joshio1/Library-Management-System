@@ -21,15 +21,25 @@
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <%= f.text_field :password %>
-  </div>
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
 
-  <div class="field">
-    <%= f.label :role %>
-    <%= f.number_field :role %>
-  </div>
+    <div class="field">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+    </div>
+
+    <% if current_user && ( current_user.role ==2 || current_user.role==0 ) %>
+        <div class="field">
+          <%= f.label :role %>
+          <%= f.select "role", options_for_select([["Library Member" , 1 ],["Admin" , 0]]) %>
+          <%= f.number_field :role %>
+        </div>
+    <%end%>
+
+
 
   <div class="actions">
     <%= f.submit %>

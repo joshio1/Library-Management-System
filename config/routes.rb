@@ -1,14 +1,25 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  # root 'welcome#index'
+  root 'sessions#new'
+
+  resources :sessions, only: [:new, :create, :destroy]
+
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
 
   resources :bookings do
   get 'view_history', on: :member
+  get 'view_current_reservation', on: :member
   end
 
   resources :users do
     get 'show_admin', on: :member
     get 'manage_admins', on: :collection
     get 'manage_members', on: :collection
+    get 'current_reservation', on: :member
+    get 'booking_history', on: :member
+    get 'users/userhome'
   end
 
   resources :rooms do
