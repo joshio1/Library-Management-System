@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<h1> Room Details:</h1>
 <p>
   <strong>Number:</strong>
   <%= @room.number %>
@@ -17,7 +18,11 @@
 
 <p>
   <strong>Status:</strong>
-  <%= @room.status %>
+  <% if @room.status==1 %>
+    Available
+<% else %>
+    Booked
+<% end %>
 </p>
 
 <%= link_to 'Edit', edit_room_path(@room) %> |

@@ -1,24 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @user.email %>
+  <h1>Welcome Administrator <%= @user.name %>!</h1>
 </p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
-
-<p>
-  <strong>Role:</strong>
-  <%= @user.role %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %> | <%= link_to 'Manage Rooms', manage_rooms_url %>
+<h3>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <%= link_to 'Edit My Profile', edit_user_path(@user) %> <br><br><br>
+  <%= link_to 'Manage Admins', manage_admins_users_url %><br><br><br>
+  <%= link_to 'Manage Rooms', manage_rooms_url %><br><br><br>
+  <%= link_to 'Manage Library Members', manage_members_users_url %>
+</h3>

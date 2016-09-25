@@ -1,26 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Manage Rooms</h1>
+<h1>Admins</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Email</th>
+    <th>Name</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= user.name %></td>
+        <td><%= user.role %></td>
+        <td><%= user.password %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td>
+        <% if user.role !=2 %>
+            <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
 
 <br>
-<br>
-<br>
-<h2>
-<%= link_to 'Add a new room', new_room_path %></h2>
 
-<br>
-<h2>Room Status:</h2>
-<div id="calendar"></div>
-
-<h2>View Room Details:</h2>
-
-<%= form_for @room, url: {action: "view_room_details"} do |f| %>
-    <%= select_tag "room", options_from_collection_for_select(@rooms, "id", "number") %>
-    <%= f.submit "View Room" %>
-<% end %>
-
-
-<br>
-<h2>
-<%= link_to 'Book Room as a user', new_booking_path %>
-</h2>
+<%= link_to 'Create New Admin', new_user_path %>

@@ -19,6 +19,7 @@ class BookingsController < ApplicationController
 
   # GET /bookings/new
   def new
+    render plain: params[:id];
     @booking = Booking.new
   end
 

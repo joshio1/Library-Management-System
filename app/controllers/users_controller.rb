@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :show_admin]
 
   # GET /users
   # GET /users.json
@@ -10,6 +10,11 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+  end
+
+  # GET /users/1
+  # GET /users/1.json
+  def show_admin
   end
 
   # GET /users/new
@@ -35,6 +40,16 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  # GET /rooms/manage_admins
+  def manage_admins
+    @users = User.where('role=? OR role=?', 0, 2);
+  end
+
+  # GET /rooms/manage_members
+  def manage_members
+    @users = User.where('role=?', 1);
   end
 
   # PATCH/PUT /users/1

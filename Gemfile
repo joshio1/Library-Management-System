@@ -31,8 +31,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Full Calendar
-gem 'fullcalendar-rails'
+# gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+
+gem 'rails-fullcalendar-resourceviews', '~> 1.6', '>= 1.6.4.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

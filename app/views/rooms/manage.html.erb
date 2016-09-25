@@ -1,41 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Rooms</h1>
-
-<%= link_to 'Add a new room', new_room_path %>
-
-<h2>Room List</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Number</th>
-      <th>Size</th>
-      <th>Building</th>
-      <th>Status</th>
-      <th>Bookings</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @rooms.each do |room| %>
-      <tr>
-        <td><%= room.number %></td>
-        <td><%= room.size %></td>
-        <td><%= room.building %></td>
-        <td><%= room.status %></td>
-        <td><% room.bookings.each do |b| %><%= b.booking_start_time%><% end %></td>
-        <td><%= link_to 'Show', room%></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h1>Manage Rooms</h1>
 
 <br>
-<h1>Welcome to Calendar</h1>
+<br>
+<br>
+<h2>
+<%= link_to 'Add a new room', new_room_path %></h2>
+
+<br>
+<h2>Room Status:</h2>
 <div id="calendar"></div>
 
-<%= link_to 'New Room', new_room_path %>
+<h2>View Room Details:</h2>
+
+<%= form_for @room, url: {action: "view_room_details"} do |f| %>
+    <%= select_tag "room", options_from_collection_for_select(@rooms, "id", "number") %>
+    <%= f.submit "View Room" %>
+<% end %>
+
+
+<br>
+<h2>
+<%= link_to 'Book Room as a user', new_booking_path %>
+</h2>

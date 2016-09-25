@@ -1,6 +1,42 @@
 <h1>New Room</h1>
 
-<%= render 'form', room: @room %>
+<%= form_for(@room) do |f| %>
+    <% if @room.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@room.errors.count, "error") %> prohibited this room from being saved:</h2>
+
+          <ul>
+            <% @room.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :number %>
+      <%= f.text_field :number %>
+    </div>
+
+    <div class="field">
+      <%= f.label :size %>
+      <%= f.select "size", options_for_select([["Small" , "Small" ],["Medium" , "Medium" ],["Large" , "Large" ]]) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :building %>
+      <%= f.select "building", options_for_select([["Hunt Library" , "Hunt Library" ],["D.H. Hill" , "D.H. Hill" ]]) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :status %>
+      <%= f.select "status", options_for_select([["Available" , "1" ],["Booked" , "0" ]]) %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
 
 <%= link_to 'Back', rooms_path %>
 <%= link_to 'Manage Rooms', manage_rooms_url %>

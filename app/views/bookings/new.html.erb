@@ -1,5 +1,34 @@
 <h1>New Booking</h1>
 
-<%= render 'form', booking: @booking %>
+<%= form_for(@booking) do |f| %>
+    <% if @booking.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
 
-<%= link_to 'Back', bookings_path %>
+          <ul>
+            <% @booking.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :user_id %>
+      <%= f.select "user_id", options_from_collection_for_select(User.all, "id", "email") %>
+    </div>
+
+    <div class="field">
+      <%= f.label :room_id %>
+      <%= f.select "room_id", options_from_collection_for_select(Room.all, "id", "number") %>
+    </div>
+
+    <div class="field">
+      <%= f.label :booking_start_time %>
+      <%= f.datetime_select :booking_start_time %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
