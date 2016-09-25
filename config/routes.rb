@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
 
   resources :bookings do
   get 'view_history', on: :member
