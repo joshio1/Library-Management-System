@@ -14,6 +14,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def authenticate_user!
+    if(current_user == nil)
+      redirect_to '/'
+    end
+  end
+
+
+
   helper_method :current_user
   helper_method :home_path
 
