@@ -23,17 +23,19 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 #Use ActiveModel has_secure_password
+# Use Redis adapter to run Action Cable in production
+# gem 'redis', '~> 3.0'
+#Use ActiveModel has_secure_password
 # gem 'bcrypt'
 gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 # Full Calendar
 # gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 
 gem 'rails-fullcalendar-resourceviews', '~> 1.6', '>= 1.6.4.1'
+
+# gem 'sqlite3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

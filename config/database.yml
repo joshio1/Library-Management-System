@@ -60,3 +60,10 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+#  adapter: postgresql
+#  host: localhost
+#  username: test
+#  password: test
+#  database: library_production        # or whatever the name is
+#  encoding: UTF8
