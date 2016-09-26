@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy, :show_admin]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
   # GET /users.json
@@ -33,8 +33,16 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
+        # format.html { redirect_to @user, notice: 'User was successfully created.' }
+        # format.json { render :show, status: :created, location: @user }
+        format.html {
+          if(current_user.role == 2 || current_user.role == 0)
+            redirect_to show_admin_users_url, notice: 'User was succesfully created.'
+          else
+            redirect_to 'users/userhome', notice: 'User was successfully created.'
+          end
+        }
+        format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -57,7 +65,14 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+
+        format.html {
+          if(current_user.role == 2 || current_user.role == 0)
+            redirect_to show_admin_users_url, notice: 'User was succesfully updated.'
+          else
+            redirect_to 'users/userhome', notice: 'User was successfully updated.'
+          end
+            }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }

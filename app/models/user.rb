@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :rooms, :through => :bookings
   accepts_nested_attributes_for :bookings
   accepts_nested_attributes_for :rooms
+  has_secure_password
 
   validates :name,
             presence: true
@@ -11,7 +12,7 @@ class User < ApplicationRecord
             presence: true
 
   validates :password,
-            presence: true
+            presence: true, :on => :create
 
   validates_format_of :email,:with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 

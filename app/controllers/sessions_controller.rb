@@ -8,9 +8,9 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       #redirect_to user_url, notice: 'Logged in'
       if current_user.role
-        render 'users/show_admin'
+        redirect_to show_admin_users_url
       else
-        render 'users/userhome'
+        redirect_to 'users/userhome'
       end
 
     else

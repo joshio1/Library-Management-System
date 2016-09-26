@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails LibraryApp: development" uuid="7e1bb56c-ba3c-405e-81eb-1a4a1ec0e1b4">
+      <database-info product="PostgreSQL" version="9.6rc1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>test</user-name>
+      <user-password>dfdedfcfdfd9dfde</user-password>
+      <introspection-scope>test:public,pg_catalog,test</introspection-scope>
+      <resolve-scope>test:public,test</resolve-scope>
+    </data-source>
+    <data-source name="Rails LibraryApp: test" uuid="d6918dd4-9326-4ff1-b4d0-187f5122f11b">
+      <database-info product="PostgreSQL" version="9.6rc1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>test</user-name>
+      <user-password>dfdedfcfdfd9dfde</user-password>
+      <introspection-scope>test:public,pg_catalog,test</introspection-scope>
+      <resolve-scope>test:public,test</resolve-scope>
+    </data-source>
+  </component>
+</project>

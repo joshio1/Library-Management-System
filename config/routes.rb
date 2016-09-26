@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    get 'show_admin', on: :member
+    get 'show_admin', on: :collection
     get 'manage_admins', on: :collection
     get 'manage_members', on: :collection
     get 'current_reservation', on: :member
