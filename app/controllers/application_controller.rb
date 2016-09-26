@@ -6,7 +6,15 @@ class ApplicationController < ActionController::Base
     User.where(id: session[:user_id]).first
   end
 
-  helper_method :current_user
+  def home_path
+    if(current_user.role == 1)
+      'users/userhome'
+    else
+      show_admin_users_url
+    end
+  end
 
+  helper_method :current_user
+  helper_method :home_path
 
 end
