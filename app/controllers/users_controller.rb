@@ -36,11 +36,15 @@ class UsersController < ApplicationController
         # format.html { redirect_to @user, notice: 'User was successfully created.' }
         # format.json { render :show, status: :created, location: @user }
         format.html {
-          if(current_user.role == 2 || current_user.role == 0)
-            redirect_to show_admin_users_url, notice: 'User was succesfully created.'
-          else
-            redirect_to 'users/userhome', notice: 'User was successfully created.'
+          if(!current_user)
+            session[:user_id] = @user.id
           end
+
+            if(current_user.role == 2 || current_user.role == 0)
+              redirect_to show_admin_users_url, notice: 'User was succesfully created.'
+            else
+              redirect_to '/users/userhome', notice: 'User was successfully created.'
+            end
         }
         format.json { render :show, status: :ok, location: @user }
       else
@@ -70,7 +74,7 @@ class UsersController < ApplicationController
           if(current_user.role == 2 || current_user.role == 0)
             redirect_to show_admin_users_url, notice: 'User was succesfully updated.'
           else
-            redirect_to 'users/userhome', notice: 'User was successfully updated.'
+            redirect_to userhome_users_url, notice: 'User was successfully updated.'
           end
             }
         format.json { render :show, status: :ok, location: @user }

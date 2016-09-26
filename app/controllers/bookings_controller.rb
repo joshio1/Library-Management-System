@@ -22,16 +22,21 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+  # GET /bookings/new
+  def new_reservation
+    @booking = Booking.new
+  end
+
   # GET /bookings/1/view_history
   def view_history
-    @bookings = Booking.where('user_id=?',params[:id]);
-    @user = User.find_by(params[:id]);
+    @bookings = Booking.where('user_id=?',current_user.id);
+    @user = current_user
   end
 
   #
   def view_current_reservation
-    @bookings = Booking.where('(user_id=? AND booking_start_time>=? )',params[:id], Time.now);
-    @user = User.find_by(params[:id]);
+    @bookings = Booking.where('(user_id=? AND booking_start_time>=? )',current_user.id, Time.now);
+    @user = current_user
   end
 
   # GET /bookings/1/edit
@@ -43,35 +48,30 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @current_room_bookings = Booking.where('room_id=?', @booking.room_id);
-    # render plain: "Text :#{@current_room_bookings.size}";
-    # debugger;
     overlap = false;
     @current_room_bookings.each do |old_booking|
       endTime = old_booking.booking_start_time + 2*60*60;
       currentEndTime = @booking.booking_start_time + 2*60*60;
       if(@booking.booking_start_time...currentEndTime).overlaps?(old_booking.booking_start_time...endTime)
         respond_to do |format|
-          format.html { redirect_to @booking, notice: "Booking for that time slot already exists!" }
+          format.html { redirect_to new_booking_path, notice: "Booking for that time slot already exists!" }
           format.json { render json: @booking.errors, status: :unprocessable_entity }
         end
+        overlap = true;
         break;
       end
+    end
+    if(!overlap)
+      respond_to do |format|
+        if @booking.save
+          format.html { redirect_to home_path, notice: 'Booking was successfully created.' }
+          format.json { render :show, status: :created, location: @booking}
+        else
+          format.html { render :new }
+          format.json { render json: @booking.errors, status: :unprocessable_entity }
+        end
       end
-    # if(overlap)
-    #   render plain: "Overlaps"
-    # else
-    #   render plain: "Does not overlap";
-    # end
-
-    # respond_to do |format|
-    #   if @booking.save
-    #     format.html { redirect_to @booking, notice: 'Booking was successfully created.' }
-    #     format.json { render :show, status: :created, location: @booking}
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @booking.errors, status: :unprocessable_entity }
-    #   end
-    # end
+    end
   end
 
   # PATCH/PUT /bookings/1

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :bookings do
   get 'view_history', on: :member
+  get 'new_reservation', on: :collection
   get 'view_current_reservation', on: :member
   end
 
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
     get 'manage_members', on: :collection
     get 'current_reservation', on: :member
     get 'booking_history', on: :member
-    get 'users/userhome'
+    get 'userhome', on: :collection
   end
 
   resources :rooms do

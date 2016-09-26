@@ -38,10 +38,11 @@
     </div>
     <% else %>
         <%= f.label :role %>
-        <%= f.text_field :name, :value => 1%>
+        <%= f.select :role, options_for_select([["Member" , "1" ]])%>
     <%end%>
 
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

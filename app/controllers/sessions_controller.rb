@@ -7,10 +7,10 @@ class SessionsController < ApplicationController
 
       session[:user_id] = user.id
       #redirect_to user_url, notice: 'Logged in'
-      if current_user.role
+      if current_user.role ==0 || current_user.role ==2
         redirect_to show_admin_users_url
       else
-        redirect_to 'users/userhome'
+        redirect_to userhome_users_url
       end
 
     else
@@ -20,6 +20,9 @@ class SessionsController < ApplicationController
   end
 
   def new
+    if(current_user)
+      redirect_to home_path
+    end
   end
 
   def destroy

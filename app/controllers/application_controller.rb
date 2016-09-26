@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
   end
 
   def home_path
-    if(current_user.role == 1)
-      'users/userhome'
+    if(current_user && current_user.role == 1)
+      userhome_users_url
     else
       show_admin_users_url
     end
