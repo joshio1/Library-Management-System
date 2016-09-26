@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
   end
 
   def new
-    if(current_user.not_nil?)
+    if(current_user != nil)
       redirect_to home_path
     end
   end
