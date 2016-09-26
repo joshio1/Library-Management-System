@@ -27,6 +27,28 @@ class RoomsController < ApplicationController
   def edit
   end
 
+
+  def search
+    @room = Room.new;
+  end
+
+  @@stored_rooms
+
+  def custom_update
+    # @rooms = Room.all
+    #render plain: params['room']['size'];
+    # render 'rooms/search_result'
+    @rooms = Room.where('(size = ? AND building = ? AND status = ?)', params['room']['size'],params['room']['building'],params['room']['status'])
+    @@stored_rooms = @rooms
+  end
+
+  def search_result
+    @rooms = @@stored_rooms
+    respond_to do |format|
+    format.json { render :json => @rooms }
+    end
+  end
+
   # POST /rooms
   # POST /rooms.json
   def create

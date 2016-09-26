@@ -31,15 +31,15 @@
       <%= f.password_field :password_confirmation %>
     </div>
 
-    <% if current_user && ( current_user.role == 2 || current_user.role== 0 ) %>
     <div class="field">
+    <% if current_user && ( current_user.role == 2 || current_user.role== 0 ) %>
       <%= f.label :role %>
       <%= f.select :role, options_for_select([["Administrator" , "0" ]])%>
-    </div>
     <% else %>
         <%= f.label :role %>
-        <%= f.select :role, options_for_select([["Member" , "2" ]])%>
+        <%= f.select :role, options_for_select([["Member" , "1" ]])%>
     <%end%>
+    </div>
 
   <div class="actions">
     <%= f.submit %>

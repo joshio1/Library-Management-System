@@ -1,0 +1,28 @@
+<h1>Search Room</h1>
+
+<%= form_for (@room), :url => { :action => "custom_update" } do  |f| %>
+
+    <!-- <div class="field">
+      <%= f.label :number %>
+    <%= f.text_field :number %>
+    </div>-->
+
+    <div class="field">
+      <%= f.label :size %>
+      <%= f.select "size", options_for_select([["Small" , "Small" ],["Medium" , "Medium" ],["Large" , "Large" ]]) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :building %>
+      <%= f.select "building", options_for_select([["Hunt Library" , "Hunt Library" ],["D.H. Hill" , "D.H. Hill" ]]) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :status %>
+      <%= f.select "status", options_for_select([["Available" , "1" ],["Booked" , "0" ]]) %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit 'Search' %>
+    </div>
+<% end %>

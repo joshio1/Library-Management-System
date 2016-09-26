@@ -39,12 +39,7 @@ class UsersController < ApplicationController
           if(!current_user)
             session[:user_id] = @user.id
           end
-
-            if(current_user.role == 2 || current_user.role == 0)
-              redirect_to show_admin_users_url, notice: 'User was succesfully created.'
-            else
-              redirect_to '/users/userhome', notice: 'User was successfully created.'
-            end
+          redirect_to home_path
         }
         format.json { render :show, status: :ok, location: @user }
       else
@@ -90,7 +85,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_url, notice: 'User was successfully removed.' }
       format.json { head :no_content }
     end
   end
@@ -103,6 +98,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :name, :password, :role)
+      params.require(:user).permit(:email, :name, :password, :role, :password_confirmation)
     end
 end

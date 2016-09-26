@@ -16,9 +16,6 @@
       <% if current_user %>
           Logged in as <%= current_user.email %>
           <%= link_to "Log out", logout_path %>
-      <% else %>
-          <%= link_to "Sign Up", signup_path %> or
-          <%= link_to "Log In", login_path %>
       <%end%>
     </div>
 
@@ -35,6 +32,8 @@
   <br>
   <br><br><br><br><br><br>
   <h3>
+    <% if current_user %>
     <%= link_to 'Go to Home', home_path %>
+    <%end%>
   </h3></footer>
 </html>

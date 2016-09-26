@@ -1,12 +1,9 @@
-<h2>Signup/Login</h2>
 <br>
 <br>
 <%= form_tag sessions_path do %>
-    <legend>Please Log In</legend>
+    <h3>Login</h3>
 
     <div class="field">
-
-
         <%= label_tag :email, 'Email' %>
         <%= email_field_tag :email, params[:email] %>
       </div>
@@ -19,6 +16,7 @@
         <%=submit_tag "Log In"%>
       </div>
 
+    <h3>New User? <%= link_to "Sign Up", signup_path %></h3>
 
     </div>
 <% end %>

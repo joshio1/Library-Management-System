@@ -14,6 +14,8 @@ class User < ApplicationRecord
   validates :password,
             presence: true, :on => :create, length: {minimum: 6}
 
+  validates_confirmation_of :password
+
   validates_format_of :email,:with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 
   validates_uniqueness_of :email

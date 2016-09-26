@@ -8,7 +8,7 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <user-name>test</user-name>
       <user-password>dfdedfcfdfd9dfde</user-password>
-      <introspection-scope>test:public,pg_catalog,test</introspection-scope>
+      <introspection-scope>test:pg_catalog,public,test</introspection-scope>
       <resolve-scope>test:public,test</resolve-scope>
     </data-source>
     <data-source name="Rails LibraryApp: test" uuid="d6918dd4-9326-4ff1-b4d0-187f5122f11b">
@@ -18,7 +18,7 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <user-name>test</user-name>
       <user-password>dfdedfcfdfd9dfde</user-password>
-      <introspection-scope>test:public,pg_catalog,test</introspection-scope>
+      <introspection-scope>test:pg_catalog,public,test</introspection-scope>
       <resolve-scope>test:public,test</resolve-scope>
     </data-source>
   </component>

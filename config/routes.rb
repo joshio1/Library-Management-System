@@ -26,6 +26,9 @@ Rails.application.routes.draw do
   resources :rooms do
     get 'manage', on: :collection
     post 'view_room_details', on: :collection
+    get 'search', on: :collection
+    get 'search_result', on: :collection
+    post 'custom_update', on: :collection
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
