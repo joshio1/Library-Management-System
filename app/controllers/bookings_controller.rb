@@ -36,7 +36,7 @@ class BookingsController < ApplicationController
 
   #
   def view_current_reservation
-    @bookings = Booking.where('(user_id=? AND booking_start_time>=? )',current_user.id, Time.now);
+    @bookings = Booking.where('(user_id=? AND booking_start_time>=? )',current_user.id, Time.now - 2*60*60);
     @user = current_user
   end
 
