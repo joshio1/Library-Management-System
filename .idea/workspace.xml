@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24d56455-3c3f-4cb7-922f-256cdabd61a3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" />
     </list>
     <ignored path="LibraryApp.iws" />
@@ -656,7 +657,7 @@
       <workItem from="1474840655412" duration="23545000" />
       <workItem from="1474904249000" duration="9865000" />
       <workItem from="1474927586239" duration="1194000" />
-      <workItem from="1475035120317" duration="796000" />
+      <workItem from="1475035120317" duration="993000" />
     </task>
     <servers />
   </component>
@@ -666,7 +667,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124365000" />
+    <option name="totallyTimeSpent" value="124562000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1924" height="1038" extended-state="0" />
