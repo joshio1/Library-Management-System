@@ -33,8 +33,6 @@ gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 # gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 
-gem 'bootstrap-sass', '~> 3.3.6'
-
 gem 'rails-fullcalendar-resourceviews', '~> 1.6', '>= 1.6.4.1'
 
 # gem 'sqlite3'

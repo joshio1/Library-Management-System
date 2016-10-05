@@ -24,6 +24,11 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  # GET /users/new_admin
+  def new_admin
+    @user = User.new
+  end
+
   # GET /users/1/edit
   def edit
   end
@@ -87,7 +92,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully removed.' }
+      format.html { redirect_to home_path, notice: 'User was successfully removed.' }
       format.json { head :no_content }
     end
   end

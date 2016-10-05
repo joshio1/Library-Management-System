@@ -20,4 +20,12 @@ class User < ApplicationRecord
 
   validates_uniqueness_of :email
 
+  def isAdmin?
+    return role==2 || role==0;
+  end
+
+  def isSuperAdmin?
+    return role == 0
+  end
+
 end

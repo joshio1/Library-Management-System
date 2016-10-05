@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Manage Admins</h2>
+<h2 align="center">Manage Admins</h2>
 <br>
 <h3>Admin List:</h3>
 <hr>
@@ -9,6 +9,7 @@
   <tr>
     <th>Email</th>
     <th>Name</th>
+    <th>Admin Type</th>
     <th colspan="3"></th>
   </tr>
   </thead>
@@ -18,12 +19,15 @@
       <tr>
         <td><%= user.email %></td>
         <td><%= user.name %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td>
-        <% if user.role !=2 %>
-            <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% if !user.isSuperAdmin? %>
+            <td>Admin</td>
+        <% else %>
+            <td>Super-Admin</td>
         <% end %>
-        </td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <% if !user.isSuperAdmin? %>
+            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
   <% end %>
   </tbody>
@@ -31,7 +35,7 @@
 
 <br>
 <h3>
-  <%= link_to 'Create New Admin', new_user_path %> |
+  <%= link_to 'Create New Admin', new_admin_users_url %> |
   <%= link_to 'Manage Rooms', manage_rooms_url %> |
   <%= link_to 'Manage Library Members', manage_members_users_url %>
 </h3>

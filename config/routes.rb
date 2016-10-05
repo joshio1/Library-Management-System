@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     get 'current_reservation', on: :member
     get 'booking_history', on: :member
     get 'userhome', on: :collection
+    get 'new_admin', on: :collection
   end
 
   resources :rooms do

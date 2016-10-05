@@ -29,9 +29,9 @@ class BookingsController < ApplicationController
   end
 
   # GET /bookings/1/view_history
-  def view_history
-    @bookings = Booking.where('user_id=?',current_user.id);
-    @user = current_user
+  def view_history()
+    @bookings = Booking.where('user_id=?',params[:id]);
+    @user = User.find(params[:id])
   end
 
   #
