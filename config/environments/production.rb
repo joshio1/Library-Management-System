@@ -84,4 +84,20 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Use an evented file watcher to asynchronously detect changes in source code,
+  # routes, locales, etc. This feature depends on the listen gem.
+  # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 25,
+      :domain               => 'example.com',
+      :user_name            => "librarymanagerncsu@gmail.com",
+      :password             => "LibraryApp",
+      :authentication       => "plain",
+      :enable_starttls_auto => true
+  }
+  
 end
