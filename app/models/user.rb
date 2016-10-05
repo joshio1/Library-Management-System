@@ -4,6 +4,7 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :bookings
   accepts_nested_attributes_for :rooms
   has_secure_password
+  enum user_type: { super_admin: 0, member: 1, admin: 2 }
 
   validates :name,
             presence: true
