@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Manage Admins</h1>
-
+<h2>Manage Admins</h2>
+<br>
+<h3>Admin List:</h3>
+<hr>
 <table>
   <thead>
   <tr>
@@ -28,7 +30,8 @@
 </table>
 
 <br>
-
-<%= link_to 'Create New Admin', new_user_path %> |
-<%= link_to 'Manage Rooms', manage_rooms_url %> |
-<%= link_to 'Manage Library Members', manage_members_users_url %>
+<h3>
+  <%= link_to 'Create New Admin', new_user_path %> |
+  <%= link_to 'Manage Rooms', manage_rooms_url %> |
+  <%= link_to 'Manage Library Members', manage_members_users_url %>
+</h3>

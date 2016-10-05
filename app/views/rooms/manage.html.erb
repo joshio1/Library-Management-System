@@ -1,29 +1,24 @@
-<h1>Manage Rooms</h1>
-
+<h2>Manage Rooms</h2>
 <br>
 <br>
+<h3>
+<%= link_to 'Add a new room', new_room_path %> | <%= link_to 'Book Room on behalf of a member', new_booking_path %></h3>
+<hr>
+<h3>Room Status:</h3><legend>(Refresh this page if you don't see the room schedule!)</legend>
 <br>
-<h2>
-<%= link_to 'Add a new room', new_room_path %></h2>
-
+<div id="calendar"></div>
 <br>
-<h2>Room Status:</h2><legend>(Refresh this page if you don't see the room list!)</legend>
-<br><div id="calendar"></div>
-
-<h2>View Room Details:</h2>
-
+<hr>
+<h3>View Room Details:</h3>
+<legend>(View room building, status and number)</legend><br>
 <%= form_for @room, url: {action: "view_room_details"} do |f| %>
     <%= select_tag "room", options_from_collection_for_select(@rooms, "id", "number") %>
     <%= f.submit "View Room" %>
 <% end %>
-
-
 <br>
-<h2>
-<%= link_to 'Book Room as a user', new_booking_path %>
-</h2>
-
 <br>
-
-<%= link_to 'Manage Admins', manage_admins_users_url %> |
-<%= link_to 'Manage Library Members', manage_members_users_url %>
+<br>
+<h3>
+  <%= link_to 'Manage Admins', manage_admins_users_url %> |
+  <%= link_to 'Manage Library Members', manage_members_users_url %>
+</h3>

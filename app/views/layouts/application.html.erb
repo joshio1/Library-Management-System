@@ -24,13 +24,12 @@
             <p><%= value %></p>
         <%end%>
     <%end%>
-
+    <hr>
     <%= yield %>
   </body>
 
 <footer>
-  <br>
-  <br><br><br><br><br><br>
+  <hr>
   <h3>
     <% if current_user %>
     <%= link_to 'Go to Home', home_path %>
