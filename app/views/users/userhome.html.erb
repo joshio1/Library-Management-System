@@ -1,15 +1,11 @@
 <p>
-<h1>Welcome <%= current_user.name %>!</h1>
+<h2>Welcome <%= current_user.name %>!</h2>
 </p>
 
-<h2>
-
+<h3>
 <%= link_to "Edit profile", edit_user_path(current_user) %><br><br><br>
 <%= link_to "Search and Reserve rooms", search_rooms_url %><br><br><br>
 <%= link_to "Current Reservation", view_current_reservation_booking_url(current_user) %><br><br><br>
 <%= link_to "Booking History", view_history_booking_url(current_user) %><br><br><br>
-
-</h2>
-
-
+</h3>
 <br>

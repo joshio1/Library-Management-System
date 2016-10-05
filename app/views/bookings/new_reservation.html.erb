@@ -1,4 +1,4 @@
-<h1>New Booking</h1>
+<h2>New Booking</h2>
 
 <%= form_for(@booking) do |f| %>
     <% if @booking.errors.any? %>
@@ -21,6 +21,11 @@
     <div class="field">
       <%= f.label :room_id %>
       <%= f.select "room_id", options_from_collection_for_select(Room.all, "id", "number") %>
+    </div>
+
+    <div class="field">
+      <%= f.label 'Email-address of team-members(Comma-Separated)' %>
+      <%= f.text_field :email %>
     </div>
 
     <div class="field">

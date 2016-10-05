@@ -67,6 +67,7 @@ class BookingsController < ApplicationController
         if @booking.save
           format.html { redirect_to home_path, notice: 'Booking was successfully created.' }
           format.json { render :show, status: :created, location: @booking}
+          UserMailer.welcome_email(@booking).deliver!
         else
           format.html { render :new }
           format.json { render json: @booking.errors, status: :unprocessable_entity }
@@ -107,6 +108,6 @@ class BookingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def booking_params
-      params.require(:booking).permit(:user_id, :room_id, :booking_start_time)
+      params.require(:booking).permit(:user_id, :room_id, :booking_start_time, :email)
     end
 end
