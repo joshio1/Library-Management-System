@@ -25,4 +25,14 @@
     <div class="actions">
       <%= f.submit 'Search' %>
     </div>
+
+    <hr>
+    <h3>Room Status:</h3><legend>(Refresh this page if you don't see the room schedule!)</legend>
+    <br>
+    <div id="calendar"></div>
+    <br>
+    <hr>
+    <h2>
+      <%= link_to 'Book Room', new_reservation_bookings_url %><br>
+    </h2>
 <% end %>

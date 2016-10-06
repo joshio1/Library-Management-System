@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many  :bookings
-  has_many :rooms, :through => :bookings
+  has_many  :bookings, dependent: :destroy
+  has_many :rooms, :through => :bookings, dependent: :destroy
   accepts_nested_attributes_for :bookings
   accepts_nested_attributes_for :rooms
   has_secure_password
