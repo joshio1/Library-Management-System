@@ -76,6 +76,7 @@ Click on "Current Reservation" -> "Destroy" to cancel a particular reservation.
 Click on "Booking History" to view entire history.
 
 ####24. Delete Room (Admin)
+Click on "Manage Rooms" -> "View Room" -> "Destroy"
 
 ####25. Special Case 1: When Admin deletes a room which has a Reservation.
 
