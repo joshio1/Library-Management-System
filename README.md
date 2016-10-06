@@ -78,18 +78,14 @@ Click on "Booking History" to view entire history.
 ####24. Delete Room (Admin)
 Click on "Manage Rooms" -> "View Room" -> "Destroy"
 
-####25. Special Case 1: When Admin deletes a room which has a Reservation.
-
-####26. Special Case 2: When Admin deletes a User who has a Reservation.
-
-####27. Notify the User and Team members about the reservation via Email.
+####25. Notify the User and Team members about the reservation via Email.
 As Admin, Click "Manage Rooms" -> "Book room on behalf of a member" -> Enter the email addresses of the User and his/her team members seperated by a comma and book room. Those people will be notified about their booking details via Email.
 As User, Click "Search and Reserve Rooms" -> "Search" -> "Book Room" -> continue the same process mentioned above.
 
-####28. Admin can make Multiple Reservations for a library member.
+####26. Admin can make Multiple Reservations for a library member.
 Click on "Manage Rooms" -> "Book room on behalf of a member" -> Book the room. Repeat this process to make multiple reservations.
 
-####29. Testing
+####27. Testing
 In the GitHub Repository of Library-Management-System, go to "test-spec" folder. The test cases for Users Model and User Controller are provided.
 
 
