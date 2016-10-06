@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24d56455-3c3f-4cb7-922f-256cdabd61a3" name="Default" comment="" />
+    <list default="true" id="24d56455-3c3f-4cb7-922f-256cdabd61a3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" />
+    </list>
     <ignored path="LibraryApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -21,7 +23,7 @@
     <SUITE FILE_PATH="coverage/LibraryApp@Production__LibraryApp.coverage" NAME="Production: LibraryApp Coverage Results" MODIFIED="1474858069441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LibraryApp" />
     <SUITE FILE_PATH="coverage/LibraryApp@All_tests_in_LibraryApp__LibraryApp.coverage" NAME="All tests in LibraryApp: LibraryApp Coverage Results" MODIFIED="1474767230415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LibraryApp" />
     <SUITE FILE_PATH="coverage/LibraryApp@Rails_console__LibraryApp.coverage" NAME="Rails console: LibraryApp Coverage Results" MODIFIED="1474751981600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LibraryApp" />
-    <SUITE FILE_PATH="coverage/LibraryApp@Development__LibraryApp.coverage" NAME="Development: LibraryApp Coverage Results" MODIFIED="1475715313487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LibraryApp" />
+    <SUITE FILE_PATH="coverage/LibraryApp@Development__LibraryApp.coverage" NAME="Development: LibraryApp Coverage Results" MODIFIED="1475725931777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="LibraryApp" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -118,6 +120,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="view_history.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/bookings/view_history.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -138,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/rooms/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            <state relative-caret-position="342">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -183,16 +195,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="264">
               <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manage.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/rooms/manage.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -258,12 +260,12 @@
         <option value="$PROJECT_DIR$/app/models/room.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/users/new_admin.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/manage_admins.html.erb" />
         <option value="$PROJECT_DIR$/app/views/rooms/search.html.erb" />
         <option value="$PROJECT_DIR$/app/views/bookings/view_history.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/rooms/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
       </list>
     </option>
   </component>
@@ -447,7 +449,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/index.html.erb&#10;show&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/show.html.erb&#10;booking&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/models/booking.rb&#10;view_histor&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/bookings/view_history.html.erb&#10;searc&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/search.html.erb&#10;manage&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/manage_members.html.erb&#10;new&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/new_admin.html.erb&#10;room&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/models/room.rb&#10;user&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/models/user.rb&#10;cust&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/custom_update.html.erb&#10;sear&#9;null&#9;null&#10;appl&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/assets/javascripts/application.js&#10;search&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/search.html.erb&#10;new_adm&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/new_admin.html.erb&#10;super&#9;null&#9;null&#10;form&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/_form.html.erb&#10;routes&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/config/routes.rb&#10;view&#9;null&#9;null&#10;view_hist&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/bookings/view_history.html.erb&#10;manage_adm&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/manage_admins.html.erb&#10;admin&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/show_admin.html.erb&#10;gemfil&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/Gemfile&#10;showad&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/show_admin.html.erb&#10;produ&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/config/environments/production.rb&#10;environ&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/config/environment.rb&#10;gemfi&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/Gemfile&#10;deve&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/config/environments/development.rb&#10;application.cs&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/assets/stylesheets/application.css&#10;manage_ad&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/manage_admins.html.erb&#10;showadm&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/show_admin.html.erb&#10;showa&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/show_admin.html.erb&#10;userh&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/userhome.html.erb&#10;use&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/mailers/user_mailer.rb&#10;environm&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/config/environment.rb&#10;book&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/controllers/bookings_controller.rb&#10;app&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/controllers/application_controller.rb&#10;userma&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/mailers/user_mailer.rb&#10;boo&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/controllers/bookings_controller.rb&#10;usermai&#9;null&#9;null&#10;applica&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/mailers/application_mailer.rb&#10;database&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/config/database.yml&#10;view_C&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/bookings/view_current_reservation.html.erb&#10;userhom&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/userhome.html.erb&#10;inde&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/index.html.erb&#10;for&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/_form.html.erb&#10;mana&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/manage.html.erb&#10;custo&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/custom_update.html.erb&#10;ses&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/controllers/sessions_controller.rb&#10;custom&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/custom_update.html.erb&#10;sea&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="new&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/new.html.erb&#10;index&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/index.html.erb&#10;show&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/show.html.erb&#10;booking&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/models/booking.rb&#10;view_histor&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/bookings/view_history.html.erb&#10;searc&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/search.html.erb&#10;manage&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/manage_members.html.erb&#10;room&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/models/room.rb&#10;user&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/models/user.rb&#10;cust&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/custom_update.html.erb&#10;sear&#9;null&#9;null&#10;appl&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/assets/javascripts/application.js&#10;search&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/search.html.erb&#10;new_adm&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/new_admin.html.erb&#10;super&#9;null&#9;null&#10;form&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/_form.html.erb&#10;routes&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/config/routes.rb&#10;view&#9;null&#9;null&#10;view_hist&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/bookings/view_history.html.erb&#10;manage_adm&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/manage_admins.html.erb&#10;admin&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/show_admin.html.erb&#10;gemfil&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/Gemfile&#10;showad&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/show_admin.html.erb&#10;produ&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/config/environments/production.rb&#10;environ&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/config/environment.rb&#10;gemfi&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/Gemfile&#10;deve&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/config/environments/development.rb&#10;application.cs&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/assets/stylesheets/application.css&#10;manage_ad&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/manage_admins.html.erb&#10;showadm&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/show_admin.html.erb&#10;showa&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/show_admin.html.erb&#10;userh&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/userhome.html.erb&#10;use&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/mailers/user_mailer.rb&#10;environm&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/config/environment.rb&#10;book&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/controllers/bookings_controller.rb&#10;app&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/controllers/application_controller.rb&#10;userma&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/mailers/user_mailer.rb&#10;boo&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/controllers/bookings_controller.rb&#10;usermai&#9;null&#9;null&#10;applica&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/mailers/application_mailer.rb&#10;database&#9;FILE&#9;file://C:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/config/database.yml&#10;view_C&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/bookings/view_current_reservation.html.erb&#10;userhom&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/userhome.html.erb&#10;inde&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/index.html.erb&#10;for&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/users/_form.html.erb&#10;mana&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/manage.html.erb&#10;custo&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/custom_update.html.erb&#10;ses&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/controllers/sessions_controller.rb&#10;custom&#9;FILE&#9;file://D:/Omkar/NCSU/OODD/Project 1 - Ruby on Rails/LibraryApp/app/views/rooms/custom_update.html.erb&#10;sea&#9;null&#9;null" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
@@ -731,7 +733,7 @@
       <workItem from="1475035120317" duration="993000" />
       <workItem from="1475629470210" duration="16272000" />
       <workItem from="1475684861545" duration="6728000" />
-      <workItem from="1475714886536" duration="7085000" />
+      <workItem from="1475714886536" duration="7744000" />
     </task>
     <servers />
   </component>
@@ -741,7 +743,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154647000" />
+    <option name="totallyTimeSpent" value="155306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1924" height="1038" extended-state="0" />
@@ -1058,14 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/new_admin.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -1148,8 +1142,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/rooms/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="342">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
           <folding />
         </state>
       </provider>
