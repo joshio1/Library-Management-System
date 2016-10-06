@@ -14,7 +14,7 @@
   <tbody>
     <% @bookings.each do |booking| %>
       <tr>
-        <td><%= booking.room.number %></td>
+        <td><%= booking.room.id %></td>
         <td><%= booking.booking_start_time %></td>
       </tr>
     <% end %>
