@@ -89,7 +89,7 @@ As User, Click "Search and Reserve Rooms" -> "Search" -> "Book Room" -> continue
 Click on "Manage Rooms" -> "Book room on behalf of a member" -> Book the room. Repeat this process to make multiple reservations.
 
 ####29. Testing
-
+In the GitHub Repository of Library-Management-System, go to "test-spec" folder. The test cases for Users Model and User Controller are provided.
 
 
 
